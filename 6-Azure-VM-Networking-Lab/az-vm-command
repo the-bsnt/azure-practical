@@ -1,0 +1,49 @@
+az vm create \
+ --resource-group tyler-vmss-testing-grp \
+ --name tyler-redhat-02 \
+ --location centralindia \
+ --zone 1 \
+ --image "RedHat:RHEL:10-lvm:latest" \
+ --size Standard_B2als_v2 \
+ --nics tyler-nic-01 \
+ --os-disk-name tyler-redhat-02-osdisk \
+ --storage-sku StandardSSD_LRS \
+ --authentication-type ssh \
+ --admin-username bsnt \
+ --ssh-key-values "$(az sshkey show --resource-group koili-tms-internal --name bsnt-ssh --query publicKey -o tsv)"
+
+ <!-- --security-type TrustedLaunch \
+ --enable-secure-boot true \
+ --enable-vtpm true \ -->
+ <!-- --ssh-key-name bsnt-ssh \ -->
+ <!-- --ssh-key-values ~/.ssh/bsnt-ssh.pub -->
+
+for OS artifact
+RedHat:RHEL:10-lvm:latest
+
+image structure: Publisher:Offer:SKU:Version
+RedHat:RHEL:9_4_gen2:latest
+
+inspection:
+
+- first know publisher
+
+az vm image list-offers \
+ --location centralindia \
+ --publisher RedHat \
+ --output table
+
+- then find sku
+  az vm image list-skus \
+   --location centralindia \
+   --publisher RedHat \
+   --offer RHEL \
+   --output table
+- then find image list in sku
+  az vm image list \
+   --location centralindia \
+   --publisher RedHat \
+   --offer RHEL \
+   --sku 10-lvm \
+   --all \
+   --output table;

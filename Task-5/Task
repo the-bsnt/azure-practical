@@ -1,0 +1,8 @@
+5. Virtual Machine Scale Set (VMSS) – Manual Scaling
+    Deploy a Linux VM Scale Set with a custom image or cloud-init
+
+    Set instance count to 2
+
+    Manually increase the instance count to 4 from the portal
+
+    Observe new VMs being provisioned and verify they serve the web page
