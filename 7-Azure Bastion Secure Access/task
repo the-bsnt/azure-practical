@@ -1,0 +1,18 @@
+6. Azure Bastion Secure Access
+
+Phase 1
+Deploy a VM with no public IP
+
+Configure Azure Bastion in the same VNet
+
+Connect to the VM via Bastion using the portal’s native RDP/SSH experience
+
+Confirm you can access the VM entirely over private IP
+
+Phase 2
+Create another windows server and configure Baston in it.
+
+Phase 3 Connect VM via Baston's Native Client
+Connect VM via Shareable links
+
+https://learn.microsoft.com/en-us/azure/bastion/bastion-overview
