@@ -20,11 +20,11 @@ Azure Bastion requires a dedicated subnet with a very specific name to function.
 4. Under the **Networking** tab, look for **Public IP** and explicitly set it to **None**.
 5. Finish creating the VM.
 
-![Alt text](VM-with-no-public-ip.png)
+![Alt text](2-VM-with-no-public-ip.png)
 
 #### **Step 3: Deploy Azure Bastion**
 
-![alt text](2-Create-Baston.png)
+![alt text](3-Create-Baston.png)
 
 1. Search for **Bastions** in the top search bar and click **Create**.
 2. Name your Bastion host (e.g., `Tyler-Baston-R`).
