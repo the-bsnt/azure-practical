@@ -10,7 +10,7 @@ Azure Bastion requires a dedicated subnet with a very specific name to function.
 
 4. Create your primary subnet for your VMs (e.g., `subnet-pool-1` with `10.0.1.0/24`).
 
-![Alt text](1-VNet &-subnet.png)
+![Alt text](1-VNet-&-subnet.png)
 
 #### **Step 2: Deploy the VM with No Public IP**
 
