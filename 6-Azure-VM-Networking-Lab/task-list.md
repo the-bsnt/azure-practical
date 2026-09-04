@@ -43,3 +43,7 @@
 - The VM was successfully created with the existing NIC.
 - Verified network connectivity between the two VMs by pinging one VM from the other.
 - Confirmed that the VMs were reachable over the private network.
+
+
+
+NOTE :::: A NIC can be attached to only one subnet, and that subnet belongs to one VNet.
